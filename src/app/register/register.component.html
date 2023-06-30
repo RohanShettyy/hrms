@@ -1,0 +1,120 @@
+<div class="row">
+    <div class="col-md-8 col-sm-8 bg-primary color">
+        <!-- Left section with background color -->
+        <h2 class="p-2">Company name</h2>
+        <div class="motto">
+            <p>"Our employees all work from home, and they are able to check-in/check out instead of a time-card. We
+                can just pull reports and payday is much easier."</p>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-4">
+        <!-- Right section with form elements -->
+        <div class="signin">
+            Already have an account?
+            <span class="lnk">
+                <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover link-primary"
+                    routerLink="/signin">Sign in</a>
+            </span>
+
+        </div>
+        <div class="hr">
+            <hr>
+        </div>
+
+        <div class="register">
+            <form [formGroup]="myForm" (ngSubmit)="submitForm()">
+                <div class="header">
+                    <h4>Register Company</h4>
+                </div>
+                <div class="form-group">
+                    <div class="reggap">
+                        <label for="inputName">Company Name</label><span class="asterisk">*</span>
+                    </div>
+
+
+                    <div class="textgap">
+                        <input type="text" class="form-control" id="inputName" placeholder="Enter Company name"
+                            formControlName="companyname">
+                    </div>
+                    <div class="require">
+                        <div *ngIf="myForm.get('companyname')?.invalid && myForm.get('companyname')?.touched">
+                            Company Name is required.
+                        </div>
+                    </div>
+                </div>
+                <div class="gap">
+                    <div class="form-group">
+                        <label for="inputName">Address</label><span class="asterisk">*</span>
+                        <div class="textgap">
+                            <input type="text" class="form-control" id="inputName" placeholder="Enter Address"
+                                formControlName="address">
+                        </div>
+                        <div class="require">
+                            <div *ngIf="myForm.get('address')?.invalid && myForm.get('address')?.touched">
+                                Address is required.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="gap">
+                    <div class="form-group">
+                        <label for="inputEmail">Email</label><span class="asterisk">*</span>
+                        <div class="textgap">
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Enter email"
+                                formControlName="email">
+                        </div>
+                        <div class="require">
+                            <div *ngIf="myForm.get('email')?.invalid && myForm.get('email')?.touched">
+                                Email is required.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gap">
+                    <div class="form-group">
+                        <label for="inputName">Username</label><span class="asterisk">*</span>
+                        <div class="textgap">
+                            <input type="text" class="form-control" id="inputName" placeholder="Enter username"
+                                formControlName="username">
+                        </div>
+                        <div class="require">
+                            <div *ngIf="myForm.get('username')?.invalid && myForm.get('username')?.touched">
+                                Username is required.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gap">
+                    <div class="form-group">
+                        <label for="inputName">Password</label><span class="asterisk">*</span>
+                        <div class="textgap">
+                            <input type="password" class="form-control" id="inputName" placeholder="Enter password" formControlName="password">
+                        </div>
+                        <div class="require">
+                            <div *ngIf="myForm.get('password')?.invalid && myForm.get('password')?.touched">
+                                Password is required and must be of at least 8 characters
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gap">
+                    <div class="form-group">
+                        <label for="inputName">Confirm Password</label><span class="asterisk">*</span>
+                        <div class="textgap">
+                            <input type="password" class="form-control" id="inputName" placeholder="Re-enter password" formControlName="confirmPassword">
+                        </div>
+                        <div *ngIf="myForm.hasError('passwordMismatch') && myForm.get('confirmPassword')?.touched">
+                            Passwords do not match.
+                          </div>
+                    </div>
+                </div>
+                <div class="buttgap">
+                    <div class="butt">
+                        <button type="submit" class="btn btn-danger col-md-12">Register Company</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

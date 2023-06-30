@@ -1,0 +1,173 @@
+.container {
+    position: relative;
+  }
+  
+  .background-image {
+    background-image: url('backimage.svg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh; /* Set the desired height of the background image */
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+     /* Adjust the opacity of the overlay */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .overlay h1 {
+    font-size: 32px;
+    color: #000;
+    margin-bottom: 10px;
+  }
+  
+  .overlay p {
+    font-size: 16px;
+  }
+  
+  .card.container{
+    /*justify-content: center;*/
+    width: 45%;
+    /*margin-left:15rem;
+    margin-right:15rem;*/
+    height: 30rem;
+    border-radius: 0;
+  }
+
+.first{
+    width:100%;
+    padding-right: 100px;
+    border-radius: 0;
+}
+
+.second{
+    border-radius: 0;
+}
+
+.signin{
+  margin-top:30px;
+}
+
+.header{
+  margin-right:100px;
+  
+}
+
+.logo{
+  margin-top: 50px;
+  font-size: 20px;
+  text-align: left;
+  padding-left: 30px;
+}
+
+.email{
+  margin-top: 50px;
+  text-align: center;
+  
+}
+
+
+.form-control{
+  border-radius: 0;
+}
+
+.form-control:focus {
+  border-color: #1d70ff; /* Change the border color to desired color */
+  box-shadow: none; /* Remove the box shadow */
+  transition: all 0.3s ease;
+}
+
+.password{
+
+  margin-top: 15px;
+  text-align: center;
+}
+
+.butt{
+  margin-top: 25px;
+  text-align: center;
+  
+}
+
+.btn-primary{
+  border-radius: 0;
+}
+
+.forgot{
+  margin-top: 40px;
+  text-align: center;
+}
+
+.hr{
+  margin-left: 50px;
+}
+
+.btn-light{
+  margin-top: 15px;
+}
+
+.using{
+  margin-left: 20px;
+  font-weight: 490;
+}
+
+.signup{
+
+    margin-top: 20px;
+}
+
+.form{
+  padding-top: 5px;
+}
+
+@media (max-width: 767px) {
+    .overlay{
+        padding: 0;
+    }
+  .card.container{
+    /*justify-content: center;*/
+    width: 100%;
+    /*margin-left:15rem;
+    margin-right:15rem;*/
+    height: 100vh;
+    border-radius: 0;
+    padding-top: 5rem;
+  }
+
+  
+  .password{
+    padding-top: 10px;
+  }
+
+  .butt{
+    padding-top: 20px;
+  }
+  .btn-primary{
+    width: 100%;
+  }
+
+}
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .card.container{
+    /*justify-content: center;*/
+    width: 100%;
+    /*margin-left:15rem;
+    margin-right:15rem;*/
+    height: 40rem;
+    border-radius: 0;
+  }
+
+}
