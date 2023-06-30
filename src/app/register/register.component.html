@@ -37,8 +37,11 @@
                             formControlName="companyname">
                     </div>
                     <div class="require">
-                        <div *ngIf="myForm.get('companyname')?.invalid && myForm.get('companyname')?.touched">
-                            Company Name is required.
+                        <div
+                            *ngIf="myForm.get('companyname')?.invalid && (myForm.get('companyname')?.touched || submitted)">
+                            <div *ngIf="myForm.get('companyname')?.hasError('required')">
+                                Company Name is required.
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -50,8 +53,11 @@
                                 formControlName="address">
                         </div>
                         <div class="require">
-                            <div *ngIf="myForm.get('address')?.invalid && myForm.get('address')?.touched">
-                                Address is required.
+                            <div
+                                *ngIf="myForm.get('address')?.invalid && (myForm.get('address')?.touched || submitted)">
+                                <div *ngIf="myForm.get('address')?.hasError('required')">
+                                    Address is required.
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -65,8 +71,13 @@
                                 formControlName="email">
                         </div>
                         <div class="require">
-                            <div *ngIf="myForm.get('email')?.invalid && myForm.get('email')?.touched">
-                                Email is required.
+                            <div *ngIf="myForm.get('email')?.invalid && (myForm.get('email')?.touched || submitted)">
+                                <div *ngIf="myForm.get('email')?.hasError('required')">
+                                    Email is required.
+                                </div>
+                                <div *ngIf="myForm.get('email')?.hasError('email')">
+                                    Please enter a valid email address.
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -79,9 +90,11 @@
                                 formControlName="username">
                         </div>
                         <div class="require">
-                            <div *ngIf="myForm.get('username')?.invalid && myForm.get('username')?.touched">
+                        <div *ngIf="myForm.get('username')?.invalid && (myForm.get('username')?.touched || submitted)">
+                            <div *ngIf="myForm.get('username')?.hasError('required')">
                                 Username is required.
                             </div>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -89,11 +102,18 @@
                     <div class="form-group">
                         <label for="inputName">Password</label><span class="asterisk">*</span>
                         <div class="textgap">
-                            <input type="password" class="form-control" id="inputName" placeholder="Enter password" formControlName="password">
+                            <input type="password" class="form-control" id="inputName" placeholder="Enter password"
+                                formControlName="password">
                         </div>
                         <div class="require">
-                            <div *ngIf="myForm.get('password')?.invalid && myForm.get('password')?.touched">
-                                Password is required and must be of at least 8 characters
+                            <div
+                                *ngIf="myForm.get('password')?.invalid && (myForm.get('password')?.touched || submitted)">
+                                <div *ngIf="myForm.get('password')?.hasError('required')">
+                                    Password is required.
+                                </div>
+                                <div *ngIf="myForm.get('password')?.hasError('minlength')">
+                                    Password must be of at least 8 characters.
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -102,16 +122,21 @@
                     <div class="form-group">
                         <label for="inputName">Confirm Password</label><span class="asterisk">*</span>
                         <div class="textgap">
-                            <input type="password" class="form-control" id="inputName" placeholder="Re-enter password" formControlName="confirmPassword">
+                            <input type="password" class="form-control" id="inputName" placeholder="Re-enter password"
+                                formControlName="confirmPassword">
                         </div>
+                        <div class="require">
                         <div *ngIf="myForm.hasError('passwordMismatch') && myForm.get('confirmPassword')?.touched">
                             Passwords do not match.
-                          </div>
+                        </div>
+                        </div>
                     </div>
                 </div>
                 <div class="buttgap">
                     <div class="butt">
-                        <button type="submit" class="btn btn-danger col-md-12">Register Company</button>
+                        <button type="submit" class="btn btn-danger col-md-12" >Company
+                            
+                            </button>
                     </div>
                 </div>
             </form>

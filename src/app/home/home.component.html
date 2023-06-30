@@ -1,0 +1,28 @@
+<div class="sidebar">
+    <div class="logo-details">
+        <i class='bx bxl-meta'></i>
+        <span class="logo_name">HRMS</span>
+
+    </div>
+    <ul class="nav-links">
+        <li>
+            <div class="iocn-link">
+                <i class='bx bx-collection'></i>
+                <span class="link_name">
+                <a >Categories</a>
+                </span>
+
+                <a (click)="toggleDropdown()"><i class='bx bxs-chevron-down arrow'></i></a>
+            </div>
+            <div class="sub-menu">
+                <ul *ngIf="showDropdown">
+                    <li><a href="#">Category 1</a></li>
+                    <li><a href="#">Category 2</a></li>
+                    <li><a href="#">Category 3</a></li>
+                    <!-- Add more categories as needed -->
+                </ul>
+            </div>
+            
+        </li>
+    </ul>
+</div>

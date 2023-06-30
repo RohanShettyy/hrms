@@ -8,7 +8,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 })
 export class RegisterComponent {
   myForm: FormGroup;
-
+  submitted = false;
   constructor(private formBuilder: FormBuilder) {
     this.myForm = this.formBuilder.group({
       companyname: ['', Validators.required],
@@ -22,6 +22,7 @@ export class RegisterComponent {
 
 
 submitForm() {
+  this.submitted = true;
   if (this.myForm.valid) {
     // Form is valid, perform necessary actions (e.g., submit data)
     console.log(this.myForm.value);
