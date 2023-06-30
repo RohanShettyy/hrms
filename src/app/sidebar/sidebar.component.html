@@ -1,0 +1,90 @@
+<div class="sidebar">
+    <div class="logo-details">
+        <i class='bx bxl-meta'></i>
+        <span class="logo_name">HRMS</span>
+
+    </div>
+    <ul class="nav-links">
+
+        <li>
+            <a href="#">
+                <i class="bx bx-grid-alt"></i>
+                <span class="link_name">Dashboard</span>
+            </a>
+
+        </li>
+        <li>
+
+            <div class="iocn-link">
+                <a href="#">
+                    <i class='bx bx-collection'></i>
+                    <span class="link_name">Categories</span>
+                </a>
+
+                <a (click)="toggleDropdown('categories')">
+                    <div class="arrow"><i class='bx bxs-chevron-down arrow'></i></div>
+                </a>
+            </div>
+            <div class="sub-menu">
+                <ul *ngIf="activeDropdown === 'categories'">
+                    <li><a href="#">Category 1</a></li>
+                    <li><a href="#">Category 2</a></li>
+                    <li><a href="#">Category 3</a></li>
+
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="iocn-link">
+                <a href="#">
+                <i class='bx bxs-book'></i>
+                <span class="link_name">Docs</span>
+                </a>
+
+                <a (click)="toggleDropdown('docs')"><i class='bx bxs-chevron-down arrow'></i></a>
+            </div>
+            <div class="sub-menu">
+                <ul *ngIf="activeDropdown === 'docs'">
+                    <li><a href="#">Category 1</a></li>
+                    <li><a href="#">Category 2</a></li>
+                    <li><a href="#">Category 3</a></li>
+
+                </ul>
+            </div>
+        </li>
+
+        <li>
+            <div class="iocn-link">
+                <a href="#">
+                <i class='bx bx-pie-chart-alt-2'></i>
+                <span class="link_name">
+                    <a>Analytics</a>
+                </span>
+                </a>
+                <a (click)="toggleDropdown('analytics')"><i class='bx bxs-chevron-down arrow'></i></a>
+            </div>
+            <div class="sub-menu">
+                <ul *ngIf="activeDropdown === 'analytics'">
+                    <li><a href="#">Category 1</a></li>
+                    <li><a href="#">Category 2</a></li>
+                    <li><a href="#">Category 3</a></li>
+                </ul>
+            </div>
+
+        </li>
+        <li>
+            <a href="#">
+                <i class='bx bx-info-circle'></i>
+                <span class="link_name">About us</span>
+            </a>
+
+        </li>
+
+        <li>
+            <a href="#">
+                <i class='bx bx-cog'></i>
+                <span class="link_name">Settings</span>
+            </a>
+        </li>
+    </ul>
+</div>
