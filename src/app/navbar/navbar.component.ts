@@ -6,24 +6,24 @@ import { Router } from '@angular/router';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements OnInit{
-  @Input() collapsed = false;
-  @Input() screenWidth = 0;
+export class NavbarComponent{
+  //  @Input() collapsed = false;
+  // @Input() screenWidth = 0;
 
-  constructor() {}
-  ngOnInit(): void {
+  // constructor() {}
+  // ngOnInit(): void {
       
-  }
+  // }
 
-  getHeadClass(): string {
-    let styleClass = '';
-    if(this.collapsed && this.screenWidth>768) {
-      styleClass = 'navbar-trimmed';
+  // getHeadClass(): string {
+  //   let styleClass = '';
+  //   if(this.collapsed && this.screenWidth>768) {
+  //     styleClass = 'navbar-trimmed';
 
-    }
-    else {
-      styleClass = 'navbar-md-screen';
-    }
-    return styleClass;
-  }
+  //   }
+  //   else {
+  //     styleClass = 'navbar-md-screen';
+  //   }
+  //   return styleClass;
+  // }
 }

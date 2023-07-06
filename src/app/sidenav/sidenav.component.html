@@ -1,94 +1,64 @@
-<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed': ''">
-    <div class="logo-container">
-        <button class="logo" (click)="toggleCollapse()">H</button>
-        <div class="logo-text" *ngIf="collapsed">HRMS</div>
-        <!-- <button class="btn-close" *ngIf="collapsed" (click)="closeSidenav">
-            <i class='bx bx-x'></i>
-        </button> -->
+<!-- Sidebar -->
+<nav id="sidebarMenu" class=" d-lg-block sidebar collapse bg-white">
+    <div class="position-sticky">
+        <div class="list-group list-group-flush mx-3 mt-4">
+            <a href="#" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
+                <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Main dashboard</span>
+            </a>
+            <ul class="sidenav-menu">
+                <li class="sidenav-item">
+                    <a class="list-group-item list-group-item-action ripple py-2 d-flex align-items-center" style="
+                    border-width: 0 0 1px;" data-mdb-toggle="collapse" href="#sidenav-collapse-1-0-0" role="button"
+                        aria-expanded="true">
+                        <i class="fas fa-grin fa-fw me-3"></i>
+                        <span>Categories</span>
+                        <i class="fas fa-angle-up rotate-icon ms-auto" style="transform: rotate(180deg); "></i>
+                    </a>
+                    <ul class="sidenav-collapse collapse show " id="sidenav-collapse-1-0-0">
+                        <li class="sidenav-item">
+                            <a class="sidenav-link ripple-surface py-1" href="#">Link 4</a>
+                        </li>
+                        <li class="sidenav-item">
+                            <a class="sidenav-link ripple-surface" href="#">Link 5</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="sidenav-menu">
+                <li class="sidenav-item">
+                    <a class="list-group-item list-group-item-action ripple py-2 d-flex align-items-center" style="
+                    border-width: 0 0 1px;" data-mdb-toggle="collapse" href="#sidenav-collapse-2-0-0" role="button"
+                        aria-expanded="true">
+                        <i class="fas fa-grin fa-fw me-3"></i>
+                        <span>Analytics</span>
+                        <i class="fas fa-angle-up rotate-icon ms-auto" style="transform: rotate(180deg); "></i>
+                    </a>
+                    <ul class="sidenav-collapse collapse show " id="sidenav-collapse-2-0-0">
+                        <li class="sidenav-item">
+                            <a class="sidenav-link ripple-surface py-1" href="#">Link 4</a>
+                        </li>
+                        <li class="sidenav-item">
+                            <a class="sidenav-link ripple-surface" href="#">Link 5</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i
+                    class="fas fa-lock fa-fw me-3"></i><span>Password</span></a>
+            <a href="#" class="list-group-item list-group-item-action py-2 ripple">
+                <i class="fas fa-chart-pie fa-fw me-3"></i><span>SEO</span>
+            </a>
+
+            <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i
+                    class="fas fa-chart-bar fa-fw me-3"></i><span>Orders</span></a>
+
+            <a href="#" class="list-group-item list-group-item-action py-2 ripple logout d-flex"><i
+                    class="fas fa-chart-bar fa-fw me-3"></i><span>Logout</span></a>
+            
+     
+            
+        </div>
     </div>
-    <ul class="sidenav-nav">
-
-        <li class="sidenav-nav-item">
-            <a class="sidenav-nav-link" routerLink="#">
-                <i class="sidenav-link-icon" class="bx bx-grid-alt"></i>
-                <span class="sidenav-link-text" *ngIf="collapsed">Dashboard</span>
-            </a>
-
-        </li>
-        
-        <li class="sidenav-nav-item">
-            
-            <a class="sidenav-nav-link" (click)="toggleDropdown('categories')">
-                <i class="sidenav-link-icon" class='bx bx-collection'></i>
-                <span class="sidenav-link-text" *ngIf="collapsed">Categories</span>
-                <div class="arrow" *ngIf="collapsed"><i class='bx bxs-chevron-down arrow'></i></div>
-            </a>
-            
-
-            <div class="sub-menu" *ngIf="collapsed">
-                <ul *ngIf="activeDropdown === 'categories'">
-                    <li><a class="sidenav-nav-dropdown" routerLink="home">Category 1</a></li>
-                    <li><a class="sidenav-nav-dropdown" routerLink="home">Category 2</a></li>
-                    <li><a class="sidenav-nav-dropdown" routerLink="home">Category 3</a></li>
-
-                </ul>
-            </div>
-           
-        </li>
-
-        <li class="sidenav-nav-item">
-            
-            <a class="sidenav-nav-link" (click)="toggleDropdown('docs')">
-                <i class="sidenav-link-icon" class='bx bxs-book'></i>
-                <span class="sidenav-link-text" *ngIf="collapsed">Docs</span>
-                <div class="arrow" *ngIf="collapsed"><i class='bx bxs-chevron-down arrow'></i></div>
-            </a>
-
-            <div class="sub-menu" *ngIf="collapsed">
-                <ul *ngIf="activeDropdown === 'docs'">
-                    <li><a class="sidenav-nav-dropdown" routerLink="home">Docs 1</a></li>
-                    <li><a class="sidenav-nav-dropdown" routerLink="home">Docs 2</a></li>
-                    <li><a class="sidenav-nav-dropdown" routerLink="home">Docs 3</a></li>
-
-                </ul>
-            </div>
-            
-        </li>
-
-        <li class="sidenav-nav-item">
-            
-            <a class="sidenav-nav-link" (click)="toggleDropdown('analytics')">
-                <i class="sidenav-link-icon" class='bx bx-pie-chart-alt-2'></i>
-                <span class="sidenav-link-text" *ngIf="collapsed">Analytics</span>
-                <div class="arrow" *ngIf="collapsed"><i class='bx bxs-chevron-down arrow'></i></div>
-            </a>
-
-            <div class="sub-menu" *ngIf="collapsed">
-                <ul *ngIf="activeDropdown === 'analytics'">
-                    <li><a class="sidenav-nav-dropdown" routerLink="home">Analytics 1</a></li>
-                    <li><a class="sidenav-nav-dropdown" routerLink="home">Analytics 2</a></li>
-                    <li><a class="sidenav-nav-dropdown" routerLink="home">Analytics 3</a></li>
-
-                </ul>
-            </div>
-            
-        </li>
-
-        
-        <li class="sidenav-nav-item">
-            <a class="sidenav-nav-link" routerLink="#">
-                <i class="sidenav-link-icon" class='bx bx-info-circle'></i>
-                <span class="sidenav-link-text" *ngIf="collapsed">About us</span>
-            </a>
-
-        </li>
-
-        <li class="sidenav-nav-item">
-            <a class="sidenav-nav-link" routerLink="signin">
-                <i class="sidenav-link-icon" class='bx bx-log-out'></i>
-                <span class="sidenav-link-text" *ngIf="collapsed">Logout</span>
-            </a>
-
-        </li>
-    </ul>
-</div>
+</nav>
