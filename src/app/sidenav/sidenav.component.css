@@ -22,7 +22,9 @@ body {
   justify-content: space-between;   
        
   }
+ 
 
+  
   @media (max-width: 768.98px) {
     .sidebar {
       width: 100%;
