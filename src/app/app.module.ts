@@ -9,6 +9,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { ProfileComponent } from './profile/profile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +17,8 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     SigninComponent,
     HomeComponent,
     NavbarComponent,
-    SidenavComponent
+    SidenavComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
