@@ -6,6 +6,8 @@ import { HomeComponent } from './home/home.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProfileComponent } from './profile/profile.component';
+import { EditComponent } from './edit/edit.component';
+// import { UsersComponent } from './users/users.component';
 const routes: Routes = [
   {path : '', component: RegisterComponent},
   {path : 'signup', component: RegisterComponent },
@@ -13,7 +15,8 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'home/signin', component: SigninComponent},
   {path: 'profile', component: ProfileComponent},
-  
+  {path: 'profile/edit', component:EditComponent}
+  // {path: 'user', component: UsersComponent}
 ];
 
 @NgModule({

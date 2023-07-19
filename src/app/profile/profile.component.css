@@ -117,3 +117,10 @@
   font-size: 25px;
 }
 
+.butt {
+  margin-top: -35px;
+  margin-bottom: 40px;
+}
+.btn{
+  border-radius: 0;
+}

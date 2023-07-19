@@ -10,6 +10,11 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { ProfileComponent } from './profile/profile.component';
+
+// import { ModalComponent } from './modal/modal.component';
+import { FormsModule } from '@angular/forms';
+import { EditComponent } from './edit/edit.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,12 +23,17 @@ import { ProfileComponent } from './profile/profile.component';
     HomeComponent,
     NavbarComponent,
     SidenavComponent,
-    ProfileComponent
+    ProfileComponent,
+    EditComponent,
+    
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
