@@ -1,0 +1,73 @@
+<body>
+    <div class="contain">
+        <div class="head" style="background-image: url(assets/images/space.jpg); height: 25vh; ">
+            <div class="centered-element d-flex flex-column align-items-center justify-content-center">
+                <img *ngIf="!GetImage" src="https://mdbootstrap.com/img/Photos/Avatars/img (31).jpg" alt="avatar" class="profile-icon" style="width: 100px; height: 90px;"> 
+                <img *ngIf="GetImage" [src]="filteredImages(Profile.emp_photo)" alt="avatar"class="profile-icon" style="width: 100px; height: 90px;">
+                <div class="headtext">
+                    <div class="designation">
+                        <h4>{{Profile.emp_name}}</h4>
+                    </div>
+                    <h6 class="text-center">{{Profile.emp_email}}</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="backgroundcolor ">
+        <!-- <div class=""> -->
+            <div class="row content justify-content-center " >
+                <div class="col-lg-6 ">
+                    <div class="card mb-4 mb-md-0 ">
+                        <div class="card-body">
+                            <p class="mb-4"><span class="card-title text-info font-italic me-1"
+                                    style="font-size: 1.2rem;">Personal
+                                    Details</span>
+                            </p>
+                            <div class="row p-3">
+                                <span class="mb-1 label col-7  " style="font-size: 1rem;">Employee ID </span><span
+                                    class=" col-5 ">133</span>
+                                <hr style="opacity: 0.1;">
+                                <span class="mb-1 label col-7  " style="font-size: 1rem;">Name</span><span
+                                    class=" col-5 ">John</span>
+                                <hr style="opacity: 0.1;">
+                                <span class="mb-1 label col-7  " style="font-size: 1rem;">Email </span><span
+                                        class=" col-5 ">dsfnk@gmail.com</span>
+                                <hr style="opacity: 0.1;">
+                                <span class="mb-1 label col-7  " style="font-size: 1rem;">Contact No. </span><span
+                                    class=" col-5 ">93284510234</span>
+                                <hr style="opacity: 0.1;">
+                                <span class="mb-1 label col-7  " style="font-size: 1rem;">Date of Birth </span><span
+                                    class=" col-5 ">23/12/420</span>
+                                <hr style="opacity: 0.1;">
+                                <span class="mb-1 label col-7  " style="font-size: 1rem;">Gender </span><span
+                                    class=" col-5 ">Male</span>
+                                <hr style="opacity: 0.1;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 ">
+                    <div class="card mb-4 mb-md-0 ">
+                        <div class="card-body">
+                            <p class="mb-4">
+                                <span class="card-title text-info font-italic me-1" style="font-size: 1.2rem;">Work
+                                    Details</span>
+                            </p>
+                            <div class="row p-3">
+                                <span class="mb-1 label col-7" style="font-size: 1rem;">Company </span><span
+                                    class=" col-5 ">Sparecode</span>
+                                <hr style="opacity: 0.1;">
+                                <span class="mb-1 label col-7" style="font-size: 1rem;">Department </span><span
+                                    class=" col-5 ">Engineer</span>
+                                <hr style="opacity: 0.1;">
+                                <span class="mb-1 label col-7" style="font-size: 1rem;">Role </span><span
+                                    class=" col-5 ">dfnkf</span>
+                                <hr style="opacity: 0.1;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- </div> -->
+</body>

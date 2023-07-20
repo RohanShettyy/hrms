@@ -1,0 +1,105 @@
+<div class="contain">
+    <div class="head" style="background-image: url(assets/images/space.jpg); height: 25vh;">
+        <div class="centered-element d-flex flex-column align-items-center justify-content-center">
+            <div class="profile-picture-container">
+                <div class="profile-icon " style="background-image: url(assets/images/profile.webp);" alt="">
+                    <div *ngIf="imageUrl">
+                        <img [src]="imageUrl" alt="Uploaded Image" class="uploaded-image">
+                    </div>
+                    <div class="selected-image-overlay" *ngIf="imageUrl">
+                        <img [src]="imageUrl" alt="Uploaded Image" class="selected-image">
+                    </div>
+                </div>
+            </div>
+            <div class="headtext">
+                <div class="designation">
+                    <h4></h4>
+                </div>
+                <h6 class="text-center"></h6>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="backgroundcolor">
+    <!-- <div class="container"> -->
+        <div class="row content ">
+            <div class="col-lg-6">
+                <div class="card mb-4 mb-md-0 ">
+                    <div class="card-body">
+                        <p class="mb-2"><span class="card-title text-info font-italic me-1"
+                                style="font-size: 1.2rem;">Personal
+                                Details</span>
+                        </p>
+                        <div class="row p-3">
+                            <span class="mb-1 label col-7  " style="font-size: 1rem;">Employee ID </span><span
+                                class=" col-5 mb-2"><input type="text" class="form-control" placeholder="142"></span>
+                            <hr style="opacity: 0.1;">
+                            <span class="mb-1 label col-7  " style="font-size: 1rem;">Upload Profile Picture
+                            </span><span class=" col-5 mb-2"><input type="file" class="form-control" id="imageInput"
+                                    (change)="onImageSelected($event)"></span>
+                            <hr style="opacity: 0.1;">
+                            <span class="mb-1 label col-7  " style="font-size: 1rem;">Name</span><span
+                                class=" col-5 mb-2"><input type="text" class="form-control" placeholder="John Doe"
+                                    [(ngModel)]="inputValue" (input)="onInputChange()"></span>
+                            <hr style="opacity: 0.1;">
+                            <span class="mb-1 label col-7  " style="font-size: 1rem;">Contact No. </span><span
+                                class=" col-5 mb-2"><input type="text" class="form-control"
+                                    placeholder="9123341002"></span>
+                            <hr style="opacity: 0.1;">
+                            <span class="mb-1 label col-7  " style="font-size: 1rem;">Date of Birth </span><span
+                                class=" col-5 mb-2"><input type="date" class="form-control"
+                                    placeholder="23/1/2001"></span>
+                            <hr style="opacity: 0.1;">
+                            <span class="mb-1 label col-7  " style="font-size: 1rem;">Gender </span><span
+                                class=" col-5 mb-2">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option *ngFor="let gender of genders" [value]="gender.id">
+                                        {{ gender.name | titlecase}}
+                                    </option>
+                                </select>
+                            </span>
+                            <hr style="opacity: 0.1;">
+                            <span class="mb-1 label col-7" style="font-size: 1rem;">Blood Group </span><span
+                                class=" col-5 mb-2">
+                                <select class="form-select"  aria-label="Default select example">
+                                    <option *ngFor="let bg of bloodgroups" [value]="bg.id">
+                                        {{ bg.name | titlecase}}
+                                    </option>
+                                </select>
+                            </span>
+                            <hr style="opacity: 0.1;">
+                            <span class="mb-1 label col-7  " style="font-size: 1rem;">Address </span><span
+                                class=" col-5 mb-2"><textarea type="text" class="form-control"
+                                    placeholder="308 Negra Arroyo Lane"></textarea></span>
+                            <hr style="opacity: 0.1;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 ">
+                <div class="card mb-4 mb-md-0 ">
+                    <div class="card-body">
+                        <p class="mb-2">
+                            <span class="card-title text-info font-italic me-1" style="font-size: 1.2rem;">Work
+                                Details</span>
+                        </p>
+                        <div class="row p-3">
+                            <span class="mb-1 label col-7" style="font-size: 1rem;">Company </span><span
+                                class=" col-5 ">Sparecode</span>
+                            <hr style="opacity: 0.1;">
+                            <span class="mb-1 label col-7" style="font-size: 1rem;">Department </span><span
+                                class=" col-5 ">sdjfj;dKF</span>
+                            <hr style="opacity: 0.1;">
+                            <span class="mb-1 label col-7" style="font-size: 1rem;">Role </span><span
+                                class=" col-5 ">efkdmkmd</span>
+                            <hr style="opacity: 0.1;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="butt d-flex  ">
+                <button class="btn col-lg-2 col-10">Save Changes</button>
+            </div>
+        </div>
+    <!-- </div> -->
+</div>

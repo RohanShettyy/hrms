@@ -1,0 +1,151 @@
+.background-image {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+  }
+  // .head{
+  //   background-image: url(src/app/assets/images/space.jpg); 
+  //   height: 25vh;
+  // }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Adjust the opacity of the overlay */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .contain {
+    position: relative;
+  
+  }
+  
+  .profile-icon {
+    display: flex;
+    width: 90px;
+    height: 80px;
+    border-radius: 100%;
+    border: #fff;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    /* background-image: url("profilepic.jpg"); */
+  
+  }
+  .backgroundcolor{
+    width: 100%;
+  }
+  
+  .headtext {
+    color: #ffffff;
+    align-items: center;
+  }
+  
+  .designation{
+    /* padding-left: 40px; */
+    display: flex;
+    justify-content: center;
+  }
+  
+  .centered-element {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .content{
+    padding: 2rem 1rem;
+    background-color: #f7fdff;
+    height: 75vh;
+    margin: 0 0 0 0;
+    
+  }
+  
+  .card {
+    border: 0;
+    border-radius: 0px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+  
+  .label {
+    opacity: 0.7;
+  }
+  
+  .text {
+    font-weight: 400;
+    padding-left: 3rem;
+    margin-left: auto;
+  }
+  
+  
+  
+  
+  .card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 12px;
+    height: 24px;
+    border-radius: 0 65px 65px 0;
+    background-color: rgb(7, 147, 217);
+  }
+  
+  .card-title {
+    padding-left: 5px;
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 25px;
+  }
+
+// @media (max-width:768px) {
+//   .profile-icon{
+//     display: flex;
+//     width: 120px;
+//     height: 120px;
+//     border-radius: 100%;
+//     border: #fff;
+//     align-items: center;
+//     justify-content: center;
+//     margin-bottom: 1rem;
+//   }
+
+//   .backgroundcolor{
+//     color: #eaf2ff;
+//     width: 100%;
+//   }
+//   .content{
+//     width: 100%;
+//     height: 100vh;
+//     padding: 2rem 0rem;
+    
+//   }
+// }
+
+@media (max-width:991px) {
+
+  .content{
+    width: 100%;
+    height: 90vh;
+    padding: 2rem 0rem;
+    
+  }
+
+  .row{
+    --bs-gutter-x: 0rem;
+
+  }
+}
